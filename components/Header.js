@@ -15,11 +15,17 @@ const Wrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 30px 0;
+	padding: 20px 0;
+`
+
+const StyledNav = styled.nav`
+	display: flex;
+	gap: 20px;
 `
 
 const NavLink = styled(Link)`
 	color: #aaa;
+	text-decoration: none;
 `
 
 export default function Header() {
@@ -28,13 +34,13 @@ export default function Header() {
 			<Center>
 				<Wrapper>
 					<Logo href='/'>Ecommerce</Logo>
-					<nav>
+					<StyledNav>
 						<NavLink href='/'>Home</NavLink>
 						<NavLink href={'/products'}>All products</NavLink>
 						<NavLink href={'/categories'}>Categories</NavLink>
 						<NavLink href={'/account'}>Account</NavLink>
 						<NavLink href={'/cart'}>Cart (0)</NavLink>
-					</nav>
+					</StyledNav>
 				</Wrapper>
 			</Center>
 		</StyledHeader>
